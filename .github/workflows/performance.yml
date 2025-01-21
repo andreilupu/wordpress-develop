@@ -28,13 +28,3 @@ jobs:
     permissions:
       contents: read
     if: ${{ ( github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' ) }}
-    strategy:
-      fail-fast: false
-      matrix:
-        memcached: [ true, false ]
-        multisite: [ true, false ]
-    with:
-      memcached: ${{ matrix.memcached }}
-      multisite: ${{ matrix.multisite }}
-    secrets:
-      CODEVITALS_PROJECT_TOKEN: ${{ secrets.CODEVITALS_PROJECT_TOKEN }}
