@@ -37,7 +37,7 @@ on:
         required: false
 
 env:
-  PUPPETEER_SKIP_DOWNLOAD: ${{ true }}
+  PUPPETEER_SKIP_DOWNLOAD: true
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: ${{ true }}
   # Performance testing should be performed in an environment reflecting a standard production environment.
   LOCAL_WP_DEBUG: false
